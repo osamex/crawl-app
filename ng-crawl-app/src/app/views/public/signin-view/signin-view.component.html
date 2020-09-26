@@ -1,0 +1,21 @@
+<container *ngIf="!IsAuthenticated; then registerFormTemplate else goToDashboardTemplate">
+
+</container>
+
+<ng-template #registerFormTemplate>
+  <form  [formGroup]="formGroup" (validSubmit)="onSubmit()">
+    <div class="form-group">
+      <input type="email" class="form-control" formControlName="userEmail" placeholder="Email" aria-describedby="emailHelp" />
+      <bfv-messages></bfv-messages>
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" formControlName="userPassword" placeholder="Password"/>
+      <bfv-messages></bfv-messages>
+    </div>
+    <button type="submit" [disabled]="!isValid" class="btn btn-primary submit-button">Sign In</button>
+  </form>
+</ng-template>
+
+<ng-template #goToDashboardTemplate>
+  <p>You already signed in!</p>
+</ng-template>
