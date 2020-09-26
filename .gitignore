@@ -1,0 +1,13 @@
+crawl.webapi/Crawl.WebAPI/obj/
+crawl.webapi/Crawl.WebAPI/bin/
+crawl.webapi/Crawl.WebAPI.Common/obj/
+crawl.webapi/Crawl.WebAPI.DAL/bin/
+crawl.webapi/Crawl.WebAPI.DAL/obj/Crawl.WebAPI.DAL.csproj.nuget.dgspec.json
+crawl.webapi/Crawl.WebAPI.DAL/obj/Crawl.WebAPI.DAL.csproj.nuget.g.props
+crawl.webapi/Crawl.WebAPI.DAL/obj/Crawl.WebAPI.DAL.csproj.nuget.g.targets
+crawl.webapi/Crawl.WebAPI.DAL/obj/
+crawl.webapi/Crawl.WebAPI.Handlers.Command/bin/
+crawl.webapi/Crawl.WebAPI.Handlers.Command/obj/
+crawl.webapi/Crawl.WebAPI.Handlers.Query/bin/
+crawl.webapi/Crawl.WebAPI.Handlers.Query/obj/
+crawl.webapi/Crawl.WebAPI/.vs/

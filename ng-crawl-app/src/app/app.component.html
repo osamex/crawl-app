@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="../assets/images/iconmonstr-globe-6.svg" width="30" height="30" class="d-inline-block align-top" alt="Angular">
+    {{ AppName }}
+  </a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://pl.linkedin.com/in/oskar-oleszkiewicz-b162b3a4">
+          <img alt="@LinkedIn" src="../assets/images/iconmonstr-linkedin-4.svg">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" target="_blank" rel="noopener noreferrer" href="https://github.com/osamex/crawl-app">
+          <img alt="@GitHub" src="../assets/images/iconmonstr-github-1.svg">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" target="_blank" rel="noopener noreferrer" href="{{ SwaggerLink }}">
+          <img alt="@Swagger" src="../assets/images/iconmonstr-help-2.svg">
+        </a>
+      </li>
+      <li *ngIf="IsAuthenticated" class="nav-item">
+        <a class="nav-link" href="#">Hello! {{ UserEmail }}</a>
+      </li>
+      <li *ngIf="IsAuthenticated" class="nav-item pl-lg-3">
+        <button class="btn btn-primary" (click)="onSignOut()">Sign Out</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid pt-3">
+  <router-outlet></router-outlet>
+</div>
