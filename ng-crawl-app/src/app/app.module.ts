@@ -8,6 +8,8 @@ import { ViewsPublicModule } from './views/public/views-public.module';
 import { ViewsPrivateModule } from './views/private/views-private.module';
 import { AppCommonModule } from './common/app-common.module';
 import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
     AppRoutingModule,
     NgbModule,
     AppCommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
 
     ViewsPublicModule,
     ViewsPrivateModule,

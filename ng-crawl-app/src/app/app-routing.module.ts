@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '',   redirectTo: 'signin', pathMatch: 'full' },
-  { path: '**', redirectTo: 'errors/404', pathMatch: 'full' },
 ];
 
 @NgModule({

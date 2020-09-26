@@ -1,5 +1,4 @@
 <container *ngIf="!IsAuthenticated; then registerFormTemplate else goToDashboardTemplate">
-
 </container>
 
 <ng-template #registerFormTemplate>
@@ -17,5 +16,8 @@
 </ng-template>
 
 <ng-template #goToDashboardTemplate>
-  <p>You already signed in!</p>
+  <div class="center-text">
+    <p>You already signed in!</p>
+    <a href="/private/dashboard">Go to dashboard</a>
+  </div>
 </ng-template>

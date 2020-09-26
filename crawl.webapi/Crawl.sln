@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crawl.WebAPI", "Crawl.WebAP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crawl.WebAPI.Common", "Crawl.WebAPI.Common\Crawl.WebAPI.Common.csproj", "{F7F34FB9-C360-4DF9-89E9-0FD26D2BC6F6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crawl.WebAPI.DAL", "Crawl.WebAPI.DAL\Crawl.WebAPI.DAL.csproj", "{F1B03A05-6283-479D-AA7D-A53B6ECB066E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crawl.WebAPI.Handlers.Command", "Crawl.WebAPI.Handlers.Command\Crawl.WebAPI.Handlers.Command.csproj", "{7E4827BA-851C-4C97-A031-599C8311061A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crawl.WebAPI.Handlers.Query", "Crawl.WebAPI.Handlers.Query\Crawl.WebAPI.Handlers.Query.csproj", "{F5D2CD9C-C4C4-4547-A8F4-8C6895BE629E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crawl.WebAPI.DAL.MsSQL", "Crawl.WebAPI.DAL.MsSQL\Crawl.WebAPI.DAL.MsSQL.csproj", "{F39ED473-6C13-4449-828D-76D3E3CCC6FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +27,6 @@ Global
 		{F7F34FB9-C360-4DF9-89E9-0FD26D2BC6F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7F34FB9-C360-4DF9-89E9-0FD26D2BC6F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7F34FB9-C360-4DF9-89E9-0FD26D2BC6F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1B03A05-6283-479D-AA7D-A53B6ECB066E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1B03A05-6283-479D-AA7D-A53B6ECB066E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1B03A05-6283-479D-AA7D-A53B6ECB066E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1B03A05-6283-479D-AA7D-A53B6ECB066E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7E4827BA-851C-4C97-A031-599C8311061A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E4827BA-851C-4C97-A031-599C8311061A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E4827BA-851C-4C97-A031-599C8311061A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{F5D2CD9C-C4C4-4547-A8F4-8C6895BE629E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5D2CD9C-C4C4-4547-A8F4-8C6895BE629E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5D2CD9C-C4C4-4547-A8F4-8C6895BE629E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F39ED473-6C13-4449-828D-76D3E3CCC6FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F39ED473-6C13-4449-828D-76D3E3CCC6FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F39ED473-6C13-4449-828D-76D3E3CCC6FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F39ED473-6C13-4449-828D-76D3E3CCC6FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

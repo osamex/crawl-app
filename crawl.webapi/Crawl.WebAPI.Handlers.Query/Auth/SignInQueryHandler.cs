@@ -27,7 +27,6 @@ namespace Crawl.WebAPI.Handlers.Query.Auth
 				RequestCreated = query.Request.Created,
 				RequestId = query.Request.Id,
 				ResponseData = null,
-				IsSuccess = false
 			};
 
 			try
@@ -48,15 +47,13 @@ namespace Crawl.WebAPI.Handlers.Query.Auth
 								CreateDate = DateTime.Now,
 								ExpirationDate = DateTime.Now.AddHours(barerTokenValidPeriodHours)
 							});
-
-						response.IsSuccess = response.ResponseData != null;
 					}
 				}
 			}
 			catch (Exception e)
 			{
 				Log.Error(e, e.Message);
-				response.IsSuccess = false;
+				response.Errors.Add(e.Message);
 			}
 
 			return response;

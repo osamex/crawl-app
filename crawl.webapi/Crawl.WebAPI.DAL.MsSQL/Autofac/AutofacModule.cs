@@ -1,8 +1,8 @@
 ﻿using Autofac;
 using Crawl.WebAPI.Common.DAL.Repositories;
-using Crawl.WebAPI.DAL.Repositories;
+using Crawl.WebAPI.DAL.MsSQL.Repositories;
 
-namespace Crawl.WebAPI.DAL.Autofac
+namespace Crawl.WebAPI.DAL.MsSQL.Autofac
 {
 	public class AutofacModule : Module
 	{

@@ -7,7 +7,7 @@ using System.Text;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using AutoMapper;
-using Crawl.WebAPI.DAL;
+using Crawl.WebAPI.DAL.MsSQL;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;

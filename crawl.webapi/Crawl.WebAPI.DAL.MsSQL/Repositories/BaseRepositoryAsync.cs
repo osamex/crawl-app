@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Crawl.WebAPI.Common.Contract;
 using Crawl.WebAPI.Common.Contract.QueryFilter;
-using Crawl.WebAPI.Common.DAL;
 using Crawl.WebAPI.Common.DAL.Repositories;
 using Crawl.WebAPI.Common.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
-namespace Crawl.WebAPI.DAL.Repositories
+namespace Crawl.WebAPI.DAL.MsSQL.Repositories
 {
   public class BaseRepositoryAsync<TEntity> : IBaseRepositoryAsync<TEntity> where TEntity : BaseEntity, new()
   {

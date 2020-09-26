@@ -1,3 +1,4 @@
+<app-loader-spinner></app-loader-spinner>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">
     <img src="../assets/images/iconmonstr-globe-6.svg" width="30" height="30" class="d-inline-block align-top" alt="Angular">
@@ -26,7 +27,7 @@
         </a>
       </li>
       <li *ngIf="IsAuthenticated" class="nav-item">
-        <a class="nav-link" href="#">Hello! {{ UserEmail }}</a>
+        <a class="nav-link" href="/private/dashboard">Hello! {{ UserEmail }}</a>
       </li>
       <li *ngIf="IsAuthenticated" class="nav-item pl-lg-3">
         <button class="btn btn-primary" (click)="onSignOut()">Sign Out</button>
