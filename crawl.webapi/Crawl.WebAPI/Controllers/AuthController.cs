@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Crawl.WebAPI.Common.Contract;
 using Crawl.WebAPI.Common.Contract.Auth;
+using Crawl.WebAPI.Common.Query.Auth;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -40,7 +41,8 @@ namespace Crawl.WebAPI.Controllers
 		{
 			try
 			{
-				return Ok();
+				var response = await _mediator.Send(new SignInQuery { Request = request });
+				return Ok(response);
 			}
 			catch (Exception e)
 			{

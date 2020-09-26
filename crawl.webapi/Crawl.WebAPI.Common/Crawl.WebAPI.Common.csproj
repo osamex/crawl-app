@@ -4,18 +4,6 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Command\**" />
-    <Compile Remove="Contract\User\**" />
-    <Compile Remove="Query\**" />
-    <EmbeddedResource Remove="Command\**" />
-    <EmbeddedResource Remove="Contract\User\**" />
-    <EmbeddedResource Remove="Query\**" />
-    <None Remove="Command\**" />
-    <None Remove="Contract\User\**" />
-    <None Remove="Query\**" />
-  </ItemGroup>
-
 	<ItemGroup>
 		<PackageReference Include="Autofac" Version="5.2.0" />
 		<PackageReference Include="AutoMapper" Version="10.0.0" />
@@ -24,6 +12,11 @@
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.8" />
 		<PackageReference Include="Serilog" Version="2.10.0" />
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Command\User\" />
+	  <Folder Include="Contract\User\" />
 	</ItemGroup>
 
 </Project>

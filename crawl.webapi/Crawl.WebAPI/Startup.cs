@@ -7,6 +7,7 @@ using System.Text;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using AutoMapper;
+using Crawl.WebAPI.DAL;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -17,7 +18,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
-
 
 namespace Crawl.WebAPI
 {
@@ -74,6 +74,7 @@ namespace Crawl.WebAPI
 				});
 
 				services.AddMediatR(Assembly.GetExecutingAssembly());
+				services.AddDbContext<DataBaseContext>();
 
 				services.AddAuthentication(cfg =>
 				{
@@ -129,12 +130,24 @@ namespace Crawl.WebAPI
 					c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
 				});
 
+				MigrateAndSeedDataBase(app);
+
 				Log.Information("Application start SUCCESS");
 			}
 			catch (Exception e)
 			{
 				Log.Error(e, "Application start ERROR");
 				throw;
+			}
+		}
+
+		private static void MigrateAndSeedDataBase(IApplicationBuilder app)
+		{
+			using var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
+			using var dbContext = serviceScope.ServiceProvider.GetService<DataBaseContext>();
+			if (dbContext.Migrate())
+			{
+				dbContext.Seed();
 			}
 		}
 	}
