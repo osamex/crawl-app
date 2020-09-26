@@ -5,7 +5,7 @@ using Crawl.WebAPI.Common.Domain.Entities;
 using Crawl.WebAPI.Common.Helpers;
 using Microsoft.EntityFrameworkCore;
 
-namespace Crawl.WebAPI.DAL
+namespace Crawl.WebAPI.DAL.MsSQL
 {
 	public class DataBaseContext : DbContext, IDataContext
 	{

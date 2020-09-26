@@ -5,4 +5,5 @@ export interface IResponseInterface {
     RequestCreated: Date;
     IsSuccess: boolean;
     ResponseData: any;
+    Errors: string[];
 }

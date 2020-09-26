@@ -1,0 +1,15 @@
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\bin\Debug\netcoreapp3.1\Crawl.WebAPI.DAL.MsSQL.deps.json
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\bin\Debug\netcoreapp3.1\Crawl.WebAPI.DAL.MsSQL.runtimeconfig.json
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\bin\Debug\netcoreapp3.1\Crawl.WebAPI.DAL.MsSQL.runtimeconfig.dev.json
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\bin\Debug\netcoreapp3.1\Crawl.WebAPI.DAL.MsSQL.dll
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\bin\Debug\netcoreapp3.1\Crawl.WebAPI.DAL.MsSQL.pdb
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\bin\Debug\netcoreapp3.1\Crawl.WebAPI.Common.dll
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\bin\Debug\netcoreapp3.1\Crawl.WebAPI.Common.pdb
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\obj\Debug\netcoreapp3.1\Crawl.WebAPI.DAL.MsSQL.csprojAssemblyReference.cache
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\obj\Debug\netcoreapp3.1\Crawl.WebAPI.DAL.MsSQL.AssemblyInfoInputs.cache
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\obj\Debug\netcoreapp3.1\Crawl.WebAPI.DAL.MsSQL.AssemblyInfo.cs
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\obj\Debug\netcoreapp3.1\Crawl.WebAPI.DAL.MsSQL.csproj.CoreCompileInputs.cache
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\obj\Debug\netcoreapp3.1\Crawl.WebAPI.DAL.MsSQL.csproj.CopyComplete
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\obj\Debug\netcoreapp3.1\Crawl.WebAPI.DAL.MsSQL.dll
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\obj\Debug\netcoreapp3.1\Crawl.WebAPI.DAL.MsSQL.pdb
+C:\Users\oskar\source\repos\OTHER\crawl-app\crawl.webapi\Crawl.WebAPI.DAL.MsSQL\obj\Debug\netcoreapp3.1\Crawl.WebAPI.DAL.MsSQL.genruntimeconfig.cache

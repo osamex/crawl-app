@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignInViewComponent } from './signin-view/signin-view.component';
 import { CommonModule } from '@angular/common';
 import { NgBootstrapFormValidationModule } from "ng-bootstrap-form-validation";
+import { Error404ViewComponent } from './errors/404/error-404-view.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,11 @@ const routes: Routes = [
       {
         path: 'signin',
         component: SignInViewComponent,
-      }
+      },
+      {
+        path: 'error/404',
+        component: Error404ViewComponent,
+      },
     ],
   },
 ];
@@ -20,6 +25,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     SignInViewComponent,
+    Error404ViewComponent
   ],
   imports: [
     CommonModule,
@@ -32,6 +38,7 @@ const routes: Routes = [
   exports: [
     SignInViewComponent,
     RouterModule,
+    Error404ViewComponent
   ],
 })
 export class ViewsPublicModule {}

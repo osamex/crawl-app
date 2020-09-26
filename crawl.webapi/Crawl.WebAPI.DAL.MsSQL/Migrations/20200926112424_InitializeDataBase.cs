@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Crawl.WebAPI.DAL.Migrations
+namespace Crawl.WebAPI.DAL.MsSQL.Migrations
 {
     public partial class InitializeDataBase : Migration
     {

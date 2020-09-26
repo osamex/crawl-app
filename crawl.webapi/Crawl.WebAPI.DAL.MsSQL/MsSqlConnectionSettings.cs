@@ -1,4 +1,4 @@
-﻿namespace Crawl.WebAPI.DAL
+﻿namespace Crawl.WebAPI.DAL.MsSQL
 {
 	public class MsSqlConnectionSettings
 	{

@@ -40,7 +40,8 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Crawl.WebAPI.Common\Crawl.WebAPI.Common.csproj" />
-		<ProjectReference Include="..\Crawl.WebAPI.DAL\Crawl.WebAPI.DAL.csproj" />
+		<ProjectReference Include="..\Crawl.WebAPI.DAL.MsSQL\Crawl.WebAPI.DAL.MsSQL.csproj" />
+		<ProjectReference Include="..\Crawl.WebAPI.DAL\Crawl.WebAPI.DAL.MsSQL.csproj" />
 		<ProjectReference Include="..\Crawl.WebAPI.Handlers.Command\Crawl.WebAPI.Handlers.Command.csproj" />
 		<ProjectReference Include="..\Crawl.WebAPI.Handlers.Query\Crawl.WebAPI.Handlers.Query.csproj" />
 	</ItemGroup>
