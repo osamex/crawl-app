@@ -30,7 +30,6 @@ export class AppComponent {
       this.IsAuthenticated = response != null && response.BarerToken != null && response.UserEmail != null;
       if(this.IsAuthenticated) {
         this.UserEmail = response.UserEmail;
-        console.log('navigate to dashboard')
         this.router.navigateByUrl('/private/dashboard');
       } else {
         this.router.navigateByUrl('/signin');
