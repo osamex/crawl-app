@@ -4,13 +4,6 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Logs\**" />
-    <Content Remove="Logs\**" />
-    <EmbeddedResource Remove="Logs\**" />
-    <None Remove="Logs\**" />
-  </ItemGroup>
-
 	<ItemGroup>
 		<PackageReference Include="Autofac" Version="5.2.0" />
 		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
@@ -50,6 +43,10 @@
 		<ProjectReference Include="..\Crawl.WebAPI.DAL\Crawl.WebAPI.DAL.csproj" />
 		<ProjectReference Include="..\Crawl.WebAPI.Handlers.Command\Crawl.WebAPI.Handlers.Command.csproj" />
 		<ProjectReference Include="..\Crawl.WebAPI.Handlers.Query\Crawl.WebAPI.Handlers.Query.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Logs\" />
 	</ItemGroup>
 
 </Project>
