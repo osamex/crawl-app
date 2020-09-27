@@ -1,10 +1,18 @@
-.gallery-content {
-  margin-top: 20px;
-  text-align: center;
-}
+.img{      
+  margin:6px 6px;      
+  border: 4px solid #eee;      
+  box-shadow:rgb(224, 199, 199) 1px 1px 8px 1px;      
+  cursor: pointer      
+     }      
+ .modal-content {      
+   width: 1000px !important;      
+ }      
+ ul { padding:0; width:1200px; margin:20px auto;margin-left: 80px}      
+ li { display:inline;}
 
-img {
-  opacity: 0.8;
-  width:  100px;
-  height: 100px;
-}
+ .modal-img {
+   min-height: 100px;
+   min-width: 100px;
+   max-height: 300px;
+   max-width: 300px;
+ }

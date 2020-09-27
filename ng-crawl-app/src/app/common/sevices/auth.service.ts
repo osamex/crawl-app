@@ -5,6 +5,7 @@ import { IRequestInterface } from '../interfaces/i-request.interface';
 import { IResponseInterface } from '../interfaces/i-response.interface';
 import { AuthResponseModel } from '../models/auth-response-model';
 import { Utils } from '../utils';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,7 @@ import { Utils } from '../utils';
 export class AuthService {
   @Output() userIsSignedInEvent: EventEmitter<AuthResponseModel> = new EventEmitter<AuthResponseModel>();
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient, private toastrService: ToastrService) {}
 
   public signIn(requestData: IRequestInterface): void {
     this.httpClient.post<IResponseInterface>(`${environment.backendApi}/api/auth/signIn`, requestData)
@@ -26,6 +27,7 @@ export class AuthService {
           }
         }
 
+        this.toastrService.warning("Wrong password");
         this.signOut();
       }, () => { this.signOut(); });
   }
