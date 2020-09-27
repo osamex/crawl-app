@@ -12,3 +12,6 @@ crawl.webapi/Crawl.WebAPI.Handlers.Query/bin/
 crawl.webapi/Crawl.WebAPI.Handlers.Query/obj/
 crawl.webapi/Crawl.WebAPI/.vs/
 crawl.webapi/.vs/
+crawl.webapi/Crawl.WebAPI.Common/bin/
+crawl.webapi/Crawl.WebAPI.DAL.MsSQL/bin/
+crawl.webapi/Crawl.WebAPI.DAL.MsSQL/obj/
