@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Net;
-using System.Net.Http;
-using System.Net.NetworkInformation;
-using System.Text;
 using Crawl.WebAPI.Common.Contract.Crawl;
 using FluentValidation;
 
