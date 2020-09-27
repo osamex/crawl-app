@@ -7,10 +7,13 @@ import { LoaderInterceptor } from './interceptors/loader.interceptor';
 import { LoaderComponent } from './components/loader/loader.component';
 import { LoaderService } from './sevices/loader.service';
 import { CommonModule } from '@angular/common';
+import { SignalRService } from './sevices/signalr.service';
+import { ImageGalleryComponent } from './components/image-gallery/image-gallery.component';
 
 @NgModule({
   declarations: [
-    LoaderComponent
+    LoaderComponent,
+    ImageGalleryComponent
   ],
   imports: [
     CommonModule,
@@ -21,10 +24,12 @@ import { CommonModule } from '@angular/common';
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
     AuthGuardService,
-    LoaderService
+    LoaderService,
+    SignalRService
   ],
   exports: [
-    LoaderComponent
+    LoaderComponent,
+    ImageGalleryComponent
   ],
 })
 export class AppCommonModule {}

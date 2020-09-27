@@ -8,7 +8,7 @@ namespace Crawl.WebAPI.Common.Domain.Entities
 		{
 			var nowUtc = DateTime.UtcNow;
 			DbKey = 0;
-			AppKey = Guid.Empty;
+			AppKey = Guid.NewGuid();
 		}
 
 		public long DbKey { get; set; }

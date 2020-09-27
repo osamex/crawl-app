@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { IResponseInterface } from './common/interfaces/i-response.interface';
 import { AuthResponseModel } from './common/models/auth-response-model';
 import { AuthService } from './common/sevices/auth.service';
+import { SignalRService } from './common/sevices/signalr.service';
 import { Utils } from './common/utils';
 
 @Component({
@@ -17,8 +18,10 @@ export class AppComponent {
   SwaggerLink = `${environment.backendApi}/swagger/index.html`;
   UserEmail = ''
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router, private signalRService: SignalRService,) {
 
+    this.signalRService.startConnection();
+    this.signalRService.addListner();
     this.IsAuthenticated = !Utils.HasSessionExpiredOrNotSignedIn();
     if(this.IsAuthenticated) {
       this.UserEmail = Utils.GetCurrentUserEmail();

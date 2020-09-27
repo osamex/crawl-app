@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using Crawl.WebAPI.Common.Command.Crawl;
 using Crawl.WebAPI.Common.Contract;
-using Crawl.WebAPI.Common.Contract.Auth;
 using Crawl.WebAPI.Common.Contract.Crawl;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -27,7 +26,7 @@ namespace Crawl.WebAPI.Controllers
 		{
 			try
 			{
-				await _mediator.Publish(new CrawlExecuteCommand { Request = request });
+				await _mediator.Publish(new CrawlExecuteCommand { Request = request }).ConfigureAwait(false);
 				return Ok();
 			}
 			catch (Exception e)

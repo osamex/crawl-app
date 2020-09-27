@@ -12,6 +12,9 @@
 
 	<ItemGroup>
 		<PackageReference Include="AutoMapper" Version="10.0.0" />
+		<PackageReference Include="FluentValidation" Version="9.2.0" />
+		<PackageReference Include="HtmlAgilityPack" Version="1.11.24" />
+		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
 	</ItemGroup>
 
 	<ItemGroup>

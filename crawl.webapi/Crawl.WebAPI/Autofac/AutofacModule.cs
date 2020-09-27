@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using Autofac;
 using AutoMapper;
+using Crawl.WebAPI.Hubs;
 using MediatR;
 using MediatR.Pipeline;
 using Module = Autofac.Module;
@@ -52,6 +53,8 @@ namespace Crawl.WebAPI.Autofac
 					builder.RegisterAssemblyTypes(appAssembly).AsClosedTypesOf(mediatrOpenType).AsImplementedInterfaces();
 				}
 			}
+
+			builder.RegisterType<NotificationHub>().AsSelf().SingleInstance();
 		}
 	}
 }
