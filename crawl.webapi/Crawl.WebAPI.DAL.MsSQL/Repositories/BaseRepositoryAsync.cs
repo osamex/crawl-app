@@ -17,13 +17,13 @@ namespace Crawl.WebAPI.DAL.MsSQL.Repositories
 {
   public class BaseRepositoryAsync<TEntity> : IBaseRepositoryAsync<TEntity> where TEntity : BaseEntity, new()
   {
-    private readonly DataBaseContext _context;
+    private readonly DbContext _context;
     private readonly DbSet<TEntity> _dbSet;
     private readonly ILogger _logger;
     private readonly string _entityName;
     private readonly IMapper _mapper;
 
-    protected BaseRepositoryAsync(DataBaseContext context, ILogger logger, IMapper mapper)
+    protected BaseRepositoryAsync(DbContext context, ILogger logger, IMapper mapper)
     {
       _context = context;
       _dbSet = _context.Set<TEntity>();

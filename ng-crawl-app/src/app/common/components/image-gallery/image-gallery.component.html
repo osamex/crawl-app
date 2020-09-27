@@ -1,0 +1,14 @@
+<div class="gallery-content">
+  <section *ngIf="images.length; then successTemplate; else failTemplate"></section>
+</div>
+
+<ng-template #successTemplate>
+  <div class="row">
+    <div class="column" *ngFor="let image of images; let i = index">
+      <img src="{{ image.ImageWebSrc }}" alt="myimage" />
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #failTemplate><h4>NO IMAGES FOUND</h4></ng-template>
+

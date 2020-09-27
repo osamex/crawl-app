@@ -5,6 +5,7 @@ import { DashboardViewComponent } from './dashboard/dashboard-view.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NgBootstrapFormValidationModule } from "ng-bootstrap-form-validation";
+import { AppCommonModule } from 'src/app/common/app-common.module';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     NgBootstrapFormValidationModule.forRoot(),
+    AppCommonModule
   ],
   providers: [],
   exports: [

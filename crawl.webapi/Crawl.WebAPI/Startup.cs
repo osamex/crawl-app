@@ -8,6 +8,7 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using AutoMapper;
 using Crawl.WebAPI.DAL.MsSQL;
+using Crawl.WebAPI.Hubs;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -55,8 +56,7 @@ namespace Crawl.WebAPI
 				appAssemblies.ForEach(assembly => builder.RegisterAssemblyModules(assembly));
 				services.AddMvc()
 					.AddFluentValidation(fvc => fvc.RegisterValidatorsFromAssemblyContaining<Startup>())
-					.AddJsonOptions(options =>
-					{
+					.AddJsonOptions(options => {
 						options.JsonSerializerOptions.PropertyNamingPolicy = null;
 						options.JsonSerializerOptions.PropertyNameCaseInsensitive = false;
 					});
@@ -75,6 +75,11 @@ namespace Crawl.WebAPI
 
 				services.AddMediatR(Assembly.GetExecutingAssembly());
 				services.AddDbContext<DataBaseContext>();
+				services.AddSignalR().AddJsonProtocol(options =>
+				{
+					options.PayloadSerializerOptions.PropertyNamingPolicy = null;
+					options.PayloadSerializerOptions.PropertyNameCaseInsensitive = false;
+				});
 
 				services.AddAuthentication(cfg =>
 				{
@@ -122,7 +127,11 @@ namespace Crawl.WebAPI
 				app.UseCors("CorsPolicy");
 				app.UseAuthentication();
 				app.UseAuthorization();
-				app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+				app.UseEndpoints(endpoints =>
+					{
+						endpoints.MapControllers();
+						endpoints.MapHub<NotificationHub>("/notificationhub");
+					});
 
 				app.UseSwagger();
 				app.UseSwaggerUI(c =>

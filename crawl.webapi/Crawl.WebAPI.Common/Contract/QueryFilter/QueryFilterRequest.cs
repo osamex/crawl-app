@@ -5,7 +5,7 @@
 
 		public QueryFilterRequest()
 		{
-			maxPageSize = 200;
+			maxPageSize = 500;
 			CurrentPageNumber = 1;
 			_selectedPageSize = 10;
 			OrderBy = null;

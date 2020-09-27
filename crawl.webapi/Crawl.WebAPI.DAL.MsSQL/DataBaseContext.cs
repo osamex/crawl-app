@@ -10,6 +10,8 @@ namespace Crawl.WebAPI.DAL.MsSQL
 	public class DataBaseContext : DbContext, IDataContext
 	{
 		public DbSet<UserEntity> Users { get; set; }
+		public DbSet<SiteEntity> Sites { get; set; }
+		public DbSet<ImageEntity> Images { get; set; }
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
@@ -34,6 +36,32 @@ namespace Crawl.WebAPI.DAL.MsSQL
 			modelBuilder.Entity<UserEntity>().Property(x => x.EMail).IsRequired();
 			modelBuilder.Entity<UserEntity>().Property(x => x.PasswordHash).IsRequired();
 			modelBuilder.Entity<UserEntity>().Property(x => x.PasswordSalt).IsRequired();
+
+			#endregion
+
+			#region Sites
+
+			modelBuilder.Entity<SiteEntity>().ToTable("Sites").HasKey(x => x.DbKey);
+			modelBuilder.Entity<SiteEntity>().Property(x => x.DbKey).ValueGeneratedOnAdd();
+			modelBuilder.Entity<SiteEntity>().Property(x => x.AppKey).IsRequired();
+			modelBuilder.Entity<SiteEntity>().Property(x => x.Url).IsRequired();
+			modelBuilder.Entity<SiteEntity>().HasIndex(x => x.Url).IsUnique();
+
+			#endregion
+
+			#region Images
+
+			modelBuilder.Entity<ImageEntity>().ToTable("Images").HasKey(x => x.DbKey);
+			modelBuilder.Entity<ImageEntity>().Property(x => x.DbKey).ValueGeneratedOnAdd();
+			modelBuilder.Entity<ImageEntity>().Property(x => x.AppKey).IsRequired();
+			modelBuilder.Entity<ImageEntity>().Property(x => x.Image).IsRequired();
+			modelBuilder.Entity<ImageEntity>().Property(x => x.ImageUrl).IsRequired();
+			modelBuilder.Entity<ImageEntity>().Property(x => x.Version).IsRequired();
+			modelBuilder.Entity<ImageEntity>()
+				.HasOne(x => x.Site)
+				.WithMany(x => x.Images)
+				.HasForeignKey(f => f.SiteDbKey)
+				.IsRequired();
 
 			#endregion
 

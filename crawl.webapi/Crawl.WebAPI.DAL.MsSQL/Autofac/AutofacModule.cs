@@ -9,6 +9,8 @@ namespace Crawl.WebAPI.DAL.MsSQL.Autofac
 		protected override void Load(ContainerBuilder builder)
 		{
 			builder.RegisterType<UsersRepositoryAsync>().As<IUsersRepositoryAsync>();
+			builder.RegisterType<SitesRepositoryAsync>().As<ISitesRepositoryAsync>();
+			builder.RegisterType<ImagesRepositoryAsync>().As<IImagesRepositoryAsync>();
 			base.Load(builder);
 		}
 	}
