@@ -28,7 +28,11 @@ namespace Crawl.WebAPI.Handlers.Query.Image
 			var site = await _sitesRepository.FirstOrDefault(x => x.Url.Contains(query.Request.RequestData));
 			if (site != null)
 			{
-				return await _imagesRepository.GetFiltered<ImageResponseData>(w => w.SiteDbKey == site.DbKey);
+				return await _imagesRepository.GetFiltered<ImageResponseData>(w => w.SiteDbKey == site.DbKey, new QueryFilterRequest
+				{
+					SelectedPageSize = 200,
+					CurrentPageNumber = 1
+				});
 			}
 			return new PaginatedListResponseData<ImageResponseData>();
 		}
